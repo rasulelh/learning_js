@@ -13,6 +13,12 @@ Each folder represents a small, independent project.
 
 A JavaScript function that calculates the sum of all digits in a number using recursion.
 
+### 🔹 Sum Range (Recursion)
+📁 `sum-range-recursion`
+
+A JavaScript function that calculates the sum of all numbers in a given range using recursion.
+
+
 **Topics:**
 - Recursion
 - Numbers
