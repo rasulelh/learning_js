@@ -37,6 +37,13 @@ negative, or zero value depending on their order.
 
 ---
 
+### 🔹 Word Declination by Number
+📁 `declination-of-number`
+
+Returns the correct word form depending on the given number.
+
+---
+
 **Topics:**
 - Recursion
 - Numbers
