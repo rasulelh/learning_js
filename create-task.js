@@ -3,10 +3,24 @@
 const fs = require("fs");
 const path = require("path");
 
-const [, , folderName, title] = process.argv;
+const args = process.argv.slice(2);
+
+const folderName = args[0];
+const title = args[1];
+
+let description = "Short description.";
+
+// ищем --desc
+const descIndex = args.indexOf("--desc");
+if (descIndex !== -1 && args[descIndex + 1]) {
+  description = args[descIndex + 1];
+}
 
 if (!folderName || !title) {
-  console.log("Usage: node create-task.js <folder-name> <Task Title>");
+  console.log(
+    'Usage: node create-task.js <folder-name> <Task Title> [--desc "description"]'
+  );
+
   process.exit(1);
 }
 
@@ -32,7 +46,7 @@ fs.copyFileSync(
 let readme = fs.readFileSync(path.join(TEMPLATE_DIR, "README.md"), "utf-8");
 
 // 4. Подставляем название задачи
-readme = readme.replace("Task Title", title);
+readme = readme.replace("Short description.", description);
 
 // 5. Пишем README
 fs.writeFileSync(path.join(TARGET_DIR, "README.md"), readme);
@@ -45,16 +59,21 @@ const mainReadmePath = path.join(ROOT, "README.md");
 if (fs.existsSync(mainReadmePath)) {
   let mainReadme = fs.readFileSync(mainReadmePath, "utf-8");
 
+  // 🔒 Проверка: проект уже есть в README
+  if (mainReadme.includes(`📁 \`${folderName}\``)) {
+    console.log(`⚠️ Project "${folderName}" already exists in README`);
+    process.exit(0);
+  }
+
   const projectBlock = `
 ---
 
 ### 🔹 ${title}
 📁 \`${folderName}\`
 
-Short description.
+${description}
 `;
 
-  // Добавляем перед последней строкой
   mainReadme = mainReadme.replace(
     /\nMore projects will be added as I continue learning JavaScript 🚀/,
     `${projectBlock}\n\nMore projects will be added as I continue learning JavaScript 🚀`
