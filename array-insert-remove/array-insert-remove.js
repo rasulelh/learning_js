@@ -1,4 +1,3 @@
-const arr = [5, 99, -2, 41, 76, 22, 85];
 arr.shift();
 arr.push(50, 15);
 
@@ -15,4 +14,3 @@ function trimArray(arr) {
 }
 
 trimArray(arr);
-console.log(arr);
