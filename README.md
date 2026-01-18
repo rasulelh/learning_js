@@ -74,4 +74,12 @@ Modifies an array by inserting, removing, reordering elements and trimming its l
 Returns a value from a two-dimensional array by row and column indexes with bounds checking
 
 
+---
+
+### 🔹 Rocket Countdown
+📁 `rocket-countdown`
+
+Prints a countdown from a given number to zero and then logs a launch message
+
+
 More projects will be added as I continue learning JavaScript 🚀
