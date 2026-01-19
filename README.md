@@ -90,4 +90,12 @@ Prints a countdown from a given number to zero and then logs a launch message
 Compares two arrays and checks whether they are equal by length, order, and values
 
 
+---
+
+### 🔹 Number Staircase
+📁 `number-staircase`
+
+Prints a number staircase using nested loops where each row starts from its index
+
+
 More projects will be added as I continue learning JavaScript 🚀
