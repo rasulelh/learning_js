@@ -98,4 +98,12 @@ Compares two arrays and checks whether they are equal by length, order, and valu
 Prints a number staircase using nested loops where each row starts from its index
 
 
+---
+
+### 🔹 Format Array
+📁 `format-array`
+
+Converts an array of numbers into a formatted string joined by arrows
+
+
 More projects will be added as I continue learning JavaScript 🚀
