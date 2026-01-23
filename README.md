@@ -122,4 +122,12 @@ Checks whether an array is sorted in ascending order
 Calculates the sum of all positive numbers in a two-dimensional array
 
 
+---
+
+### 🔹 Chess Board Generator
+📁 `chess-board-generator`
+
+Generates a two-dimensional chess board with alternating cells
+
+
 More projects will be added as I continue learning JavaScript 🚀
